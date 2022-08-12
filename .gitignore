@@ -1,3 +1,4 @@
 .idea/
 kotlin-sample-app.iml
 target/
+.DS_Store
