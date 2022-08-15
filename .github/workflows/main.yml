@@ -31,6 +31,7 @@ jobs:
           
       - name: Build and push container image
         run: |
+          aws ecr get-login-password | docker login --username AWS --password-stdin 618447233064.dkr.ecr.eu-west-2.amazonaws.com
           docker build -t sample-kotlin-app:latest .
           docker tag sample-kotlin-app:latest 618447233064.dkr.ecr.eu-west-2.amazonaws.com/ecr-unp-data-ecosystem-001:latest
           docker push 618447233064.dkr.ecr.eu-west-2.amazonaws.com/ecr-unp-data-ecosystem-001:latest
