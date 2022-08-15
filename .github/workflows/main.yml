@@ -31,6 +31,6 @@ jobs:
           
       - name: Build and push container image
         run: |
-          docker build -t sample-kotlin-app:latest
+          docker build -t sample-kotlin-app:latest .
           docker tag kotlin-sample-app:latest 618447233064.dkr.ecr.eu-west-2.amazonaws.com/ecr-unp-data-ecosystem-001:latest
           docker push 618447233064.dkr.ecr.eu-west-2.amazonaws.com/ecr-unp-data-ecosystem-001:latest
